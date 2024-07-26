@@ -13,7 +13,7 @@
     <span class="navbar-brand">
       Blog da
       <img
-        src="assets/Logo.png"
+        ngSrc="assets/Logo.png"
         width="115.47"
         height="29.88"
         class="d-inline-block align-text-top"
@@ -21,7 +21,7 @@
       />
     </span>
 
-    <!-- Formulário de pesquisa com ícone -->
+      <!-- Formulário de pesquisa com ícone -->
     <form class="d-flex" role="search">
       <div class="search-container">
         <input
@@ -35,30 +35,7 @@
     </form>
   </div>
 
-  <!-- Botão de alternância do menu -->
-  <button
-    class="navbar-toggler d-md-none"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNav"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler d-md-none" type="button">
+    <img src="assets/SVG/menu.svg" width="32" height="32" alt="menu" />
   </button>
-
-  <!-- Menu colapsável -->
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <a
-      class="navbar-link"
-      href="https://aionz.com.br/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <mat-icon>arrow_back</mat-icon> Voltar para o site
-    </a>
-    <input class="form-control" type="search" aria-label="Search" />
-    <mat-icon class="search-icon">search</mat-icon>
-  </div>
 </nav>
