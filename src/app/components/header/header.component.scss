@@ -119,6 +119,24 @@ form.d-flex {
   }
 }
 
+@media (max-width: 1920px) {
+.navbar {
+  padding: 0 360px;
+}
+}
+
+@media (max-width: 1572px) {
+  .navbar {
+    padding: 2px 180px;
+  }
+}
+
+@media (max-width: 1212px) {
+  .navbar {
+    padding: 2px 100px;
+  }
+}
+
 // Responsividade para telas médias
 @media (max-width: 1147px) {
   .navbar {
@@ -175,6 +193,9 @@ form.d-flex {
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    padding: 0px 40px;
+  }
   .navbar-toggler {
     display: flex;
     flex-direction: row;
@@ -183,7 +204,67 @@ form.d-flex {
   .container-fluid {
     margin: 0px;
     width: 300px;
-    justify-content: flex-start;
+    padding: 0px 10px;
+    justify-content: center;
+    justify-content: center;
+  }
+
+  .benefit-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 400px;
+      height: 213px;
+      gap: 24px;
+    }
+  }
+
+  .main {
+    padding: 20px 0;
+  }
+
+  .benefit-section {
+    overflow: hidden;
+    justify-content: center;
+
+    .benefit-section-card-benefit {
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .large-benefit-card,
+    .small-benefit-cards .benefit-card {
+      width: 100%;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    #radio1:checked ~ .benefit-section-card-benefit .benefit-card:nth-child(1),
+    #radio2:checked ~ .benefit-section-card-benefit .benefit-card:nth-child(2),
+    #radio3:checked ~ .benefit-section-card-benefit .benefit-card:nth-child(3) {
+      display: block;
+    }
+
+    .small-benefit-cards {
+      margin-left: 0;
+    }
+
+    .navigation-auto,
+    .manual-navigation {
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .manual-btn {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      background: $neutralColors-200;
+      border-radius: 50%;
+      display: inline-block;
+    }
   }
 }
 

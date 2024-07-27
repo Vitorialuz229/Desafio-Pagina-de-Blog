@@ -1,0 +1,108 @@
+@import "../../../color-variavles.scss";
+
+.benefit-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 24px;
+    object-fit: cover;
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-image: url(./../../../assets/gradiente.png);
+    background-size: cover;
+    pointer-events: none;
+    border-radius: 24px;
+  }
+
+  h3, p {
+    position: absolute;
+    font-family: Inter;
+    width: calc(100% - 40px);
+  }
+
+  h3 {
+    bottom: 60px;
+    left: 20px;
+    font-size: 20px;
+    color: $amarelo-100;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+
+  p {
+    bottom: 20px;
+    left: 20px;
+    color: $amarelo-50;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefit-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    
+
+    img {
+      width: 90%;
+      height: auto;
+      border-radius: 24px;
+      object-fit: cover;
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      left: 29px;
+      width: 90%;
+      height: 60%;
+      pointer-events: none;
+      border-radius: 24px;
+    }
+
+    h3, p {
+      position: absolute;
+      width: calc(100% - 40px);
+      left: 25px;
+      text-align: left;
+      color: white;
+    }
+
+    h3 {
+      bottom: 60px;
+      font-size: 14px;
+      line-height: 1.2;
+      color: $amarelo-100;
+      padding: 0px 10px;
+    }
+
+    p {
+      bottom: 20px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: $amarelo-50;
+      padding: 0px 10px;
+    }
+  }
+}

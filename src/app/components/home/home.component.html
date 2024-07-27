@@ -1,1 +1,59 @@
 <app-header></app-header>
+<main>
+  <div class="row">
+    <section class="benefit-section">
+      <input type="radio" name="radio-btn" id="radio1" checked>
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <div class="benefit-section-card-benefit">
+        <div class="large-benefit-card">
+          <card-benefit
+            class="benefit-card"
+            img-path="./assets/imgBlog.png"
+            card-data="10 de Abril de 2024"
+            card-title="ITIL no Campo: Revolucionando a Gestão de Operações Agrícolas (COA)"
+            [imgWidth]="676"
+            [imgHeight]="523"
+          >
+          </card-benefit>
+        </div>
+        <div class="small-benefit-cards">
+          <card-benefit
+            class="benefit-card"
+            img-path="./assets/imgBlog.png"
+            card-data="10 de Abril de 2024"
+            card-title="ITIL no Campo: Revolucionando a Gestão de Operações Agrícolas (COA)"
+            [imgWidth]="476"
+            [imgHeight]="252"
+          >
+          </card-benefit>
+          <card-benefit
+            class="benefit-card"
+            img-path="./assets/imgBlog.png"
+            card-data="10 de Abril de 2024"
+            card-title="ITIL no Campo: Revolucionando a Gestão de Operações Agrícolas (COA)"
+            [imgWidth]="476"
+            [imgHeight]="252"
+          >
+          </card-benefit>
+        </div>
+      </div>
+    </section>
+
+    <div class="manual-navigation">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+    </div>
+
+    <div class="navigation-auto">
+      <div class="auto-btn1"></div>
+      <div class="auto-btn2"></div>
+      <div class="auto-btn3"></div>
+    </div>
+  </div>
+  <section class="benefit-section-artigos">
+    <h2>Outros artigos</h2>
+    <post-list></post-list>
+  </section>
+</main>
