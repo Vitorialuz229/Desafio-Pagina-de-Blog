@@ -1,0 +1,135 @@
+@import "../../../color-variavles.scss";
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card-container {
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  display: flex;
+  border-radius: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 473px;
+  width: 370px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.post {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 0px;
+    color: $verde-300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    max-width: 100%;
+    padding: 0px 20px;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $neutralColors-700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 4;
+    max-width: 100%;
+    padding: 10px 20px;
+
+    &.post-date {
+      font-size: 0.75rem;
+      //padding: 10px 20px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 30px;
+  }
+
+  .post-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .like-section {
+    display: flex;
+    align-items: center;
+    button.like-button {
+      margin-left: 0.5rem;
+      border: none;
+      background: transparent;
+
+      mat-icon {
+        &.favorite_border {
+          color: $primary-verde;
+        }
+      }
+    }
+
+    span.like-count {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  button.like-button {
+    margin-left: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+
+    .like-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .like-count {
+    font-size: 0.875rem; // Ajuste o tamanho da fonte conforme necessário
+    color: $neutralColors-700; // Ajuste a cor conforme necessário
+  }
+}
+
