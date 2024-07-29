@@ -1,0 +1,24 @@
+<section class="newsletter">
+  <div class="newsletter-content">
+    <div class="newsletter-icon">
+      <img src="./../../../assets/caixa de email.png" alt="Ícone de e-mail" />
+    </div>
+    <div class="newsletter-text">
+      <p>
+        <strong>Assine nossa newsletter </strong>e acesse o melhor<br />
+        conteúdo sobre a digitalização do agronegócio!
+      </p>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="newsletter-form">
+      <input formControlName="email" type="email" placeholder="Insira seu e-mail" required />
+      <button
+        class="btn-primary"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Inscreva-se
+      </button>
+    </form>
+  </div>
+</section>
+<img src="./../../../assets/Linhas.png" alt="Linhas decorativas" />

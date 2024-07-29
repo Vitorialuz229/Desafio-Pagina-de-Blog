@@ -1,0 +1,81 @@
+@import "./../../../color-variavles.scss";
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .newsletter-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 60px;
+    max-width: 1200px;
+
+    .newsletter-icon {
+      margin-right: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+        display: block;
+      }
+    }
+
+    .newsletter-text {
+      flex: 1;
+      margin-right: 10px;
+      p {
+        font-size: 20px;
+        font-weight: 400;
+      }
+      strong {
+        color: #005257;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+
+    .newsletter-form {
+      display: flex;
+      align-items: center;
+      width: 400px;
+
+      input[type="email"] {
+        flex: 1;
+        padding: 16px 24px;
+        border: 1px solid #005257;
+        border-radius: 40px;
+        font-size:16px;
+        font-weight: 400;
+      }
+
+      .btn-primary {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-verde;
+        color: #FCFCFC;
+        gap: 10px;
+        border-radius: 140px;
+
+        cursor: pointer;
+
+        &:disabled {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  img[src$="Linhas.png"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+}
