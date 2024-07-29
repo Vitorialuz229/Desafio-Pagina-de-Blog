@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { CardBenefitComponent } from '../card-benefit/card-benefit.component';
 import { PostListComponent } from '../post-list/post-list.component';
+import { BtnPrimaryComponent } from '../btn-primary/btn-primary.component';
+import { TopicosListComponent } from '../topicos-list/topicos-list.component';
+import { NgOptimizedImage } from '@angular/common';
+import { NewsletterFormComponent } from '../newsletter-form/newsletter-form.component';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +13,10 @@ import { PostListComponent } from '../post-list/post-list.component';
   imports: [
     HeaderComponent,
     CardBenefitComponent,
-    PostListComponent
+    PostListComponent,
+    TopicosListComponent,
+    NgOptimizedImage,
+    NewsletterFormComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
