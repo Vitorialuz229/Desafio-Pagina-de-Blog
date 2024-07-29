@@ -1,0 +1,15 @@
+<section class="section-topicos">
+  <img
+    src="./../../../assets/Imagem-topicos.jpeg"
+    class="background-image"
+    alt="Tópicos"
+  />
+  <div class="content">
+    <h2>Tópicos recomendados</h2>
+    <div class="container">
+      <ul>
+        <li *ngFor="let topic of topics"><strong>#</strong>{{ topic }}</li>
+      </ul>
+    </div>
+  </div>
+</section>

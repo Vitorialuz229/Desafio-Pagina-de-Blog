@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { PostResponse } from '../interface/PostResponse';
+import { Topic } from '../interface/TopicResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,9 @@ export class PostService {
   }
 
   getTopics(): Observable<string[]> {
-    return this.http.get<string[]>(this.topicsUrl);
+    return this.http.get<Topic[]>(this.topicsUrl).pipe(
+      map((topics: Topic[]) => topics.map(topic => topic.name))
+    );
   }
 
   subscribeToNewsletter(email: string): Observable<any> {
