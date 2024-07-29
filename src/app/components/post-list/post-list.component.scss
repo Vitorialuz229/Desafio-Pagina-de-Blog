@@ -3,7 +3,7 @@
 .post-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: space-between;
 }
 
@@ -128,8 +128,8 @@
   }
 
   .like-count {
-    font-size: 0.875rem; // Ajuste o tamanho da fonte conforme necessário
-    color: $neutralColors-700; // Ajuste a cor conforme necessário
+    font-size: 0.875rem;
+    color: $neutralColors-700;
   }
 }
 

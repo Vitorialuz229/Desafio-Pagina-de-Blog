@@ -4,6 +4,7 @@ import { PostService } from '../../service/post.service';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { PipesModule } from '../../module/pipes.module';
+import { BtnPrimaryComponent } from '../btn-primary/btn-primary.component';
 
 @Component({
   selector: 'post-list',
@@ -11,13 +12,15 @@ import { PipesModule } from '../../module/pipes.module';
   imports: [
     CommonModule,
     MatIconModule,
-    PipesModule
+    PipesModule,
+    BtnPrimaryComponent
   ],
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.scss',
 })
 export class PostListComponent implements OnInit {
   posts: PostResponse[] = [];
+  showAllPosts: boolean = false;
 
   constructor(private postService: PostService) { }
 
@@ -44,5 +47,9 @@ export class PostListComponent implements OnInit {
       post.likeCount -= 1;
       post.isLiked = false;
     }
+  }
+
+  toggleShowAllPosts() {
+    this.showAllPosts = !this.showAllPosts;
   }
 }
