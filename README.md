@@ -80,3 +80,4 @@ Abra o navegador e acesse http://localhost:4200/.
   json-server db.json
   
 ```
+>Certifique-se de que o arquivo db.json esteja configurado com os dados de exemplo necessários para os endpoints de posts, tópicos e inscrições na newsletter. O Json-server fornecerá um endpoint local para a inscrição na newsletter, que pode ser utilizado pela aplicação Angular para simular o processo de envio de dados.
