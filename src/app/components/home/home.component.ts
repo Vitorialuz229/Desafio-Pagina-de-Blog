@@ -6,6 +6,7 @@ import { BtnPrimaryComponent } from '../btn-primary/btn-primary.component';
 import { TopicosListComponent } from '../topicos-list/topicos-list.component';
 import { NgOptimizedImage } from '@angular/common';
 import { NewsletterFormComponent } from '../newsletter-form/newsletter-form.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ import { NewsletterFormComponent } from '../newsletter-form/newsletter-form.comp
     PostListComponent,
     TopicosListComponent,
     NgOptimizedImage,
-    NewsletterFormComponent
+    NewsletterFormComponent,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

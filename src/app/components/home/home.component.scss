@@ -10,12 +10,38 @@ main {
   justify-content: center;
   margin: 0 auto;
   text-align: center;
+
+  @media (max-width: 1440px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 1147px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 868px) {
+    padding: 30px 0;
+    gap: 40px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px 0;
+    gap: 20px;
+  }
 }
 
 .row {
   border-bottom: 1px solid $neutralColors-200;
   padding-bottom: 50px;
   margin: 0;
+
+  @media (max-width: 868px) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: 600px) {
+    padding-bottom: 20px;
+  }
 }
 
 .benefit-section {
@@ -35,6 +61,7 @@ main {
 
       .benefit-card {
         width: 100%;
+        display: block; // Garante que o cartão grande seja exibido
       }
     }
 
@@ -57,6 +84,10 @@ main {
     width: 100%;
     bottom: 10px;
     z-index: 1;
+
+    input[type="radio"] {
+      display: none; // Oculta os inputs de rádio
+    }
 
     .manual-btn {
       border: 2px solid red;
@@ -94,14 +125,16 @@ main {
       }
     }
   }
-}
 
-@media (max-width: 600px) {
-  main {
-    padding: 0;
+  @media (max-width: 1147px) {
+    .benefit-section-card-benefit {
+      .small-benefit-cards {
+        margin-left: 10px;
+      }
+    }
   }
 
-  .benefit-section {
+  @media (max-width: 868px) {
     .benefit-section-card-benefit {
       flex-direction: column;
       align-items: center;
@@ -109,10 +142,14 @@ main {
       gap: 2px;
     }
 
-    .large-benefit-card,
-    .small-benefit-cards .benefit-card {
+    .large-benefit-card {
+      display: none; // Oculta o cartão grande em telas pequenas
+    }
+
+    .small-benefit-cards {
+      margin-left: 0;
       width: 100%;
-      display: none; // Inicialmente oculto
+      align-items: center;
     }
 
     #radio1:checked ~ .benefit-section-card-benefit {
@@ -127,12 +164,17 @@ main {
       transform: translateX(-200%);
     }
 
-    .small-benefit-cards {
-      margin-left: 0;
-      width: 100%;
-      align-items: center;
+    .manual-navigation {
+      display: flex;
     }
 
+    input[type="radio"] {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 600px) {
     .manual-navigation {
       display: flex;
     }
@@ -144,38 +186,24 @@ main {
   }
 }
 
-@media (min-width: 601px) {
-  .manual-navigation {
-    display: none;
-  }
-
-  input[type="radio"] {
-    display: none;
-  }
-}
-
-@media (max-width: 1920px) {
-  .benefit-section {
-    gap: 40px;
-  }
-}
-
-@media (max-width: 1440px) {
-  main {
-    padding: 60px 0;
-  }
-}
-
 .benefit-section-artigos {
   h2 {
-  font-family: Inter;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: left;
-  color: $primary-verde;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: left;
+    color: $primary-verde;
 
+    @media (max-width: 868px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+    }
   }
 }
-
-

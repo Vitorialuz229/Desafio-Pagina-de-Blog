@@ -10,6 +10,16 @@
 .card-container {
   width: calc(33.333% - 20px);
   box-sizing: border-box;
+
+  // Responsividade para telas médias
+  @media (max-width: 1024px) and (min-width: 601px) {
+    width: calc(50% - 20px); // Ajusta a largura dos cartões em telas médias
+  }
+
+  // Responsividade para telas pequenas
+  @media (max-width: 600px) {
+    width: 100%; // Ajusta a largura dos cartões em telas pequenas
+  }
 }
 
 .card {
@@ -23,6 +33,18 @@
   width: 370px;
   overflow: hidden;
   box-sizing: border-box;
+
+  // Responsividade para telas médias
+  @media (max-width: 1024px) and (min-width: 601px) {
+    height: 400px; // Ajusta a altura do cartão em telas médias
+    width: 300px;  // Ajusta a largura do cartão em telas médias
+  }
+
+  // Responsividade para telas pequenas
+  @media (max-width: 600px) {
+    height: auto; // Ajusta a altura do cartão para se ajustar ao conteúdo em telas pequenas
+    width: 100%;  // Ajusta a largura do cartão para ocupar 100% da largura disponível
+  }
 }
 
 .post {
@@ -46,6 +68,17 @@
     line-clamp: 2;
     max-width: 100%;
     padding: 0px 20px;
+
+    // Responsividade para telas médias
+    @media (max-width: 1024px) and (min-width: 601px) {
+      font-size: 16px; // Reduz o tamanho da fonte em telas médias
+    }
+
+    // Responsividade para telas pequenas
+    @media (max-width: 600px) {
+      font-size: 14px; // Reduz o tamanho da fonte em telas pequenas
+      padding: 0px 10px; // Ajusta o padding lateral para telas pequenas
+    }
   }
 
   p {
@@ -64,6 +97,17 @@
       font-size: 0.75rem;
       //padding: 10px 20px;
     }
+
+    // Responsividade para telas médias
+    @media (max-width: 1024px) and (min-width: 601px) {
+      font-size: 0.75rem; // Reduz o tamanho da fonte em telas médias
+    }
+
+    // Responsividade para telas pequenas
+    @media (max-width: 600px) {
+      font-size: 0.65rem; // Reduz o tamanho da fonte em telas pequenas
+      padding: 8px 10px; // Ajusta o padding para telas pequenas
+    }
   }
 
   img {
@@ -72,6 +116,16 @@
     object-fit: cover;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+
+    // Responsividade para telas médias
+    @media (max-width: 1024px) and (min-width: 601px) {
+      height: 40%; // Ajusta a altura da imagem em telas médias
+    }
+
+    // Responsividade para telas pequenas
+    @media (max-width: 600px) {
+      height: 35%; // Ajusta a altura da imagem em telas pequenas
+    }
   }
 
   .post-header {
@@ -80,6 +134,12 @@
     justify-content: space-between;
     width: 100%;
     padding-right: 30px;
+
+    // Responsividade para telas pequenas
+    @media (max-width: 600px) {
+      flex-direction: column;
+      padding-right: 10px; // Ajusta o padding para telas pequenas
+    }
   }
 
   .post-info {
@@ -132,4 +192,3 @@
     color: $neutralColors-700;
   }
 }
-

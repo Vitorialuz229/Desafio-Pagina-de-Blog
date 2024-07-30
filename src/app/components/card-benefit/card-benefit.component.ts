@@ -1,12 +1,14 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'card-benefit',
   standalone: true,
   imports: [
     NgOptimizedImage,
-    CommonModule
+    CommonModule,
+    SlickCarouselModule
   ],
   templateUrl: './card-benefit.component.html',
   styleUrls: ['./card-benefit.component.scss']

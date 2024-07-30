@@ -18,7 +18,19 @@
 
     font-size: 16px;
     font-weight: 500;
-}
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      padding: 15px 30px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      padding: 12px 25px;
+      margin-top: 15px;
+    }
+  }
 
   &.secondary {
     background: $primary-verde;
@@ -28,5 +40,17 @@
     font-weight: 500;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      padding: 15px 30px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      padding: 12px 25px;
+      margin-top: 15px;
+    }
   }
 }

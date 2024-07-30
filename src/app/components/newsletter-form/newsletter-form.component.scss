@@ -13,6 +13,7 @@
     width: 100%;
     padding: 60px;
     max-width: 1200px;
+    flex-wrap: wrap; 
 
     .newsletter-icon {
       margin-right: 10px;
@@ -47,7 +48,7 @@
         padding: 16px 24px;
         border: 1px solid #005257;
         border-radius: 40px;
-        font-size:16px;
+        font-size: 16px;
         font-weight: 400;
       }
 
@@ -60,7 +61,6 @@
         color: #FCFCFC;
         gap: 10px;
         border-radius: 140px;
-
         cursor: pointer;
 
         &:disabled {
@@ -77,5 +77,69 @@
     width: 100%;
     height: auto;
     z-index: -1;
+  }
+
+  // Responsividade para telas médias
+  @media (max-width: 1024px) and (min-width: 601px) {
+    .newsletter-content {
+      padding: 40px;
+    }
+
+    .newsletter-form {
+      width: 300px;
+    }
+
+    .newsletter-text {
+      p {
+        font-size: 18px;
+      }
+      strong {
+        font-size: 18px;
+      }
+    }
+  }
+
+  // Responsividade para telas pequenas
+  @media (max-width: 600px) {
+    .newsletter-content {
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center; // Centraliza o texto em telas pequenas
+    }
+
+    .newsletter-icon {
+      margin-bottom: 10px; // Adiciona margem inferior para separar o ícone do texto
+    }
+
+    .newsletter-form {
+      width: 100%;
+      margin-top: 10px; // Adiciona margem superior para separar o formulário do texto
+    }
+
+    .newsletter-text {
+      margin: 0;
+      p {
+        font-size: 16px;
+      }
+      strong {
+        font-size: 16px;
+      }
+    }
+
+    .newsletter-form input[type="email"] {
+      padding: 12px 16px;
+    }
+
+    .newsletter-form .btn-primary {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    img[src$="Linhas.png"] {
+      width: 150%;
+      bottom: -10px;
+    }
   }
 }
